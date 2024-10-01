@@ -64,13 +64,6 @@ foaf:surname rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://purl.org/wodt/currentStatus
-:currentStatus rdf:type owl:ObjectProperty ;
-               rdfs:comment "This property links the Digital Twin Descriptor to its Digital Twin Knowledge Graph."@en ;
-               rdfs:isDefinedBy "https://purl.org/wodt/" ;
-               rdfs:label "Current status"@en .
-
-
 ###  https://purl.org/wodt/domainPredicate
 :domainPredicate rdf:type owl:ObjectProperty ;
                  rdfs:range rdf:Property ;
@@ -79,17 +72,24 @@ foaf:surname rdf:type owl:AnnotationProperty .
                  rdfs:label "Domain predicate"@en .
 
 
-###  https://purl.org/wodt/hasDescriptor
-:hasDescriptor rdf:type owl:ObjectProperty ;
-               rdfs:comment "This property allows to link to the associated Digital Twin Descriptor"@en ;
-               rdfs:isDefinedBy "https://purl.org/wodt/" ;
-               rdfs:label "Has Digital Twin Descriptor"@en .
+###  https://purl.org/wodt/dtd
+:dtd rdf:type owl:ObjectProperty ;
+     rdfs:comment "This property allows to link to the associated Digital Twin Description"@en ;
+     rdfs:isDefinedBy "https://purl.org/wodt/" ;
+     rdfs:label "Digital Twin Description"@en .
+
+
+###  https://purl.org/wodt/dtkg
+:dtkg rdf:type owl:ObjectProperty ;
+      rdfs:comment "This property links the Digital Twin Description to its Digital Twin Knowledge Graph."@en ;
+      rdfs:isDefinedBy "https://purl.org/wodt/" ;
+      rdfs:label "Digital Twin Knowledge Graph"@en .
 
 
 ###  https://purl.org/wodt/hasDigitalTwin
 :hasDigitalTwin rdf:type owl:ObjectProperty ;
                 owl:inverseOf :registeredToPlatform ;
-                rdfs:comment "This property links a WoDT Digital Twins Platform to its registered WoDT Digital Twins."@en ;
+                rdfs:comment "This property links a WoDT Platform to its registered WoDT Digital Twins."@en ;
                 rdfs:isDefinedBy "https://purl.org/wodt/" ;
                 rdfs:label "Has registered WoDT Digital Twin"@en .
 
@@ -98,9 +98,9 @@ foaf:surname rdf:type owl:AnnotationProperty .
 :registeredToPlatform rdf:type owl:ObjectProperty ;
                       rdfs:domain :WoDTDigitalTwin ;
                       rdfs:range :WoDTPlatform ;
-                      rdfs:comment "This property link the WoDT Digital Twin to the WoDT Digital Twins Platform to which it is registered."@en ;
+                      rdfs:comment "This property link the WoDT Digital Twin to the WoDT Platform to which it is registered."@en ;
                       rdfs:isDefinedBy "https://purl.org/wodt/" ;
-                      rdfs:label "Registered to WoDT Digital Twins Platform"@en .
+                      rdfs:label "Registered to WoDT Platform"@en .
 
 
 ###  https://purl.org/wodt/shadowingLatency
