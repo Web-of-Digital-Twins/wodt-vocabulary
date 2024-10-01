@@ -97,7 +97,7 @@ foaf:surname rdf:type owl:AnnotationProperty .
 ###  https://purl.org/wodt/registeredToPlatform
 :registeredToPlatform rdf:type owl:ObjectProperty ;
                       rdfs:domain :WoDTDigitalTwin ;
-                      rdfs:range :WoDTDigitalTwinsPlatform ;
+                      rdfs:range :WoDTPlatform ;
                       rdfs:comment "This property link the WoDT Digital Twin to the WoDT Digital Twins Platform to which it is registered."@en ;
                       rdfs:isDefinedBy "https://purl.org/wodt/" ;
                       rdfs:label "Registered to WoDT Digital Twins Platform"@en .
@@ -200,26 +200,26 @@ foaf:Person rdf:type owl:Class .
 ###  https://purl.org/wodt/WoDTDigitalTwin
 :WoDTDigitalTwin rdf:type owl:Class ;
                  rdfs:subClassOf :WoDTEntity ;
-                 rdfs:comment """A Digital Twin that follows the WoDT Digital Twin Specification.
-Moreover, a registered WoDT Digital Twin is a WoDT Digital Twin that has added itself or has been added to a WoDT Digital Twins Platform.
+                 rdfs:comment """A Digital Twin compliant with the HWoDT proposal.
+Moreover, a registered WoDT Digital Twin is a WoDT Digital Twin that has added itself or has been added to a WoDT Platform.
 
 Digital Twins refer to the ability to clone a Physical Asset (PA) through a software counterpart during its life cycle. The Digital Twin has a model that reflects all the properties, relationships, and characteristics of the physical asset that are important for the analyzed context."""@en ;
                  rdfs:isDefinedBy "https://purl.org/wodt/" ;
                  rdfs:label "WoDT Digital Twin"@en .
 
 
-###  https://purl.org/wodt/WoDTDigitalTwinsPlatform
-:WoDTDigitalTwinsPlatform rdf:type owl:Class ;
-                          rdfs:subClassOf :WoDTEntity ;
-                          rdfs:comment "A WoDT Digital Twins Platform is a software entity that manages the creation of the WoDT Digital Twins Platform Knowledge Graph by merging the Digital Twins Knowledge Graphs obtained from the registered WoDT Digital Twins. Based on the WoDT Digital Twins Platform Knowledge Graph the WoDT Digital Twins Platform offers services at the application level and acts as a service-layer to enable applications on top of it."@en ;
-                          rdfs:isDefinedBy "https://purl.org/wodt/" ;
-                          rdfs:label "WoDT Digital Twins Platform"@en .
-
-
 ###  https://purl.org/wodt/WoDTEntity
 :WoDTEntity rdf:type owl:Class ;
             rdfs:comment "This class includes all the classes defined under the WoDT vocabulary"@en ;
             rdfs:isDefinedBy "https://purl.org/wodt/" .
+
+
+###  https://purl.org/wodt/WoDTPlatform
+:WoDTPlatform rdf:type owl:Class ;
+              rdfs:subClassOf :WoDTEntity ;
+              rdfs:comment "A WoDT Platform is a software entity that manages the creation of the Platform Knowledge Graph by merging the data obtained from the registered WoDT Digital Twins. Based on the Platform Knowledge Graph the WoDT Platform offers services at the application level and acts as a service-layer to enable applications on top of it."@en ;
+              rdfs:isDefinedBy "https://purl.org/wodt/" ;
+              rdfs:label "WoDT Platform"@en .
 
 
 #################################################################
