@@ -142,9 +142,20 @@ A particular use case is the association of domain-related information to the pr
 foaf:Person rdf:type owl:Class .
 
 
+###  https://purl.org/wodt/AvailableActions
+:AvailableActions rdf:type owl:Class ;
+                  rdfs:subClassOf :WoDTEntity ;
+                  owl:disjointWith :WoDTDigitalTwin ,
+                                   :WoDTPlatform ;
+                  rdfs:comment "The class that represents the WoDT Digital Twin currently available actions."@en ;
+                  rdfs:isDefinedBy "https://purl.org/wodt/" ;
+                  rdfs:label "Available actions"@en .
+
+
 ###  https://purl.org/wodt/WoDTDigitalTwin
 :WoDTDigitalTwin rdf:type owl:Class ;
                  rdfs:subClassOf :WoDTEntity ;
+                 owl:disjointWith :WoDTPlatform ;
                  rdfs:comment """A Digital Twin compliant with the HWoDT proposal.
 Moreover, a registered WoDT Digital Twin is a WoDT Digital Twin that has added itself or has been added to a WoDT Platform.
 
