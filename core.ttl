@@ -60,6 +60,15 @@ foaf:name rdf:type owl:AnnotationProperty .
 foaf:surname rdf:type owl:AnnotationProperty .
 
 
+###  https://purl.org/wodt/domainTag
+:domainTag rdf:type owl:AnnotationProperty ;
+           rdfs:comment """The domain tag annotation property allows to annotate the model with domain-oriented semantic annotations. It is purposely designed with an open range to include the possibility to use every type of semantic information available -- classes, individuals, and so on.
+
+A particular use case is the association of domain-related information to the properties, actions, and events of the WoT Thing Description used to implement the Digital Twin Description -- that at the moment only include the possibility to associate classes (via @type)."""@en ;
+           rdfs:isDefinedBy "https://purl.org/wodt/" ;
+           rdfs:label "Domain tag"@en .
+
+
 #################################################################
 #    Object Properties
 #################################################################
